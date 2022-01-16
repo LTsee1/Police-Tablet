@@ -1,0 +1,436 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="reset.css" type="text/css">
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+		<script src="./listener.js" type="text/javascript"></script>
+
+	</head>
+		<div id="container">
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="btn-group btn-group-lg">
+                <button type="button" class="btn btn-primary" id='mandat_menu_btn'>MANDAT</button>
+                <button type="button" class="btn btn-primary" id='wiezienie_menu_btn'>WIEZIENIE</button>
+                <button type="button" class="btn btn-primary" id='search_menu_btn'>WYSZUKAJ OBYWATELA</button>
+				<button type="button" class="btn btn-primary" id='taryfikator_menu_btn'>TARYFIKATOR</button>
+              </div>
+              </nav>
+			 <div class="taryfikator_box" id="taryfikator_main">
+				<button type="button" class="collapsible">PRZEMOC</button>
+				<div class="content">
+					<div class="control-group">
+						<label class="control control-checkbox">
+							Próba zabójstwa  |  15 miesięcy i 15000$
+								<input type="checkbox" id="1_taryfikator" value="15" data-valuetwo="15000" data-valuethree="Próba zabójstwa" />
+							<div class="control_indicator"></div>
+							x
+							<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+						</label>
+						<label class="control control-checkbox">
+							Grożenie pozbawienia życia lub zdrowia  |  5 miesięcy i 2500$
+								<input type="checkbox" id="2_taryfikator" value="5" data-valuetwo="2500" data-valuethree="Grożenie pozbawienia życia lub zdrowia" />
+							<div class="control_indicator"></div>
+							x
+							<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+						</label>
+						<label class="control control-checkbox">
+							Nieumyślne spowodowanie uszczerbku na zdrowiu  |  10 miesięcy i 10000$
+								<input type="checkbox" id="3_taryfikator" value="10" data-valuetwo="10000" data-valuethree="Nieumyślne spowodowanie uszczerbku na zdrowiu"/>
+							<div class="control_indicator"></div>
+							x
+							<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+						</label>
+						<label class="control control-checkbox">
+							Umyślne spowodowanie uszczerbki na zdrowiu  |  15 miesięcy i 10000$
+								<input type="checkbox" id="4_taryfikator" value="15" data-valuetwo="10000" data-valuethree="Umyślne spowodowanie uszczerbki na zdrowiu"/>
+							<div class="control_indicator"></div>
+							x
+							<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+						</label>
+						<label class="control control-checkbox">
+							Wykorzystanie seksualne  |  25 miesięcy i 20000$
+								<input type="checkbox" id="4_taryfikator" value="25" data-valuetwo="20000" data-valuethree="Wykorzystanie seksualne"/>
+							<div class="control_indicator"></div>
+							x
+							<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+						</label>
+					
+					</div>
+				</div>
+				<button type="button" class="collapsible">PRZESTĘPSTWA ZWIĄZANE Z POSIADANIEM BRONI</button>
+				<div class="content">
+
+					<label class="control control-checkbox">
+						Dystrybucja broni palnej  |  25 miesięcy i 30000$
+							<input type="checkbox" id="5_taryfikator" value="25" data-valuetwo="30000" data-valuethree="Dystrybucja broni palnej"/>
+						<div class="control_indicator"></div>
+						x
+						<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+					</label>
+					<label class="control control-checkbox">
+					Posiadanie broni nielegalnej klasy 1  |  10 miesięcy i 10000$
+							<input type="checkbox" id="6_taryfikator" value="10" data-valuetwo="10000" data-valuethree="Posiadanie broni nielegalnej klasy 1"/>
+						<div class="control_indicator"></div>
+						x
+						<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+					</label>
+					<label class="control control-checkbox">
+						Posiadanie broni nielegalnej klasy 2  | 25 miesięcy i 20000$
+							<input type="checkbox" id="7_taryfikator" value="25" data-valuetwo="20000" data-valuethree="Posiadanie broni nielegalnej klasy 2"/>
+						<div class="control_indicator"></div>
+						x
+						<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+					</label>
+					<label class="control control-checkbox">
+						Bezprawne użycie broni palnej  |  10 miesięcy i 15000$
+							<input type="checkbox" id="8_taryfikator" value="10" data-valuetwo="15000" data-valuethree="Bezprawne użycie broni palnej"/>
+						<div class="control_indicator"></div>
+						x
+						<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+					</label>
+					<label class="control control-checkbox">
+						Groźby bronią palną/białą  |  10 miesięcy i 10000$
+							<input type="checkbox" id="9_taryfikator" value="10" data-valuetwo="10000" data-valuethree="Groźby bronią palną/białą"/>
+						<div class="control_indicator"></div>
+						x
+						<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+					</label>
+
+				</div>
+				<button type="button" class="collapsible">PRZESTĘPSTWA ZWIĄZANE Z NARKOTYKAMI</button>
+				<div class="content">
+	<label class="control control-checkbox">
+		Produkcja narkotyków  |  50 miesięcy i 10000$
+			<input type="checkbox" id="10_taryfikator" value="50" data-valuetwo="10000" data-valuethree="Produkcja narkotyków"/>
+		<div class="control_indicator"></div>
+		x
+		<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+	</label>
+	<label class="control control-checkbox">
+		Dystrybucja narkotyków  |  20 miesięcy i 25000$
+			<input type="checkbox" id="11_taryfikator" value="20" data-valuetwo="25000" data-valuethree="Dystrybucja narkotyków"/>
+		<div class="control_indicator"></div>
+		x
+		<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+	</label>
+	<label class="control control-checkbox">
+		Posiadanie narkotyków miękich (powyżej 5g)  | 5 miesięcy i 10000$
+			<input type="checkbox" id="12_taryfikator" value="5" data-valuetwo="10000" data-valuethree="Posiadanie narkotyków miękich"/>
+		<div class="control_indicator"></div>
+		x
+		<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+	</label>
+	<label class="control control-checkbox">
+		Posiadanie narkotyków twardych   | 15 miesięcy i 25000$
+			<input type="checkbox" id="13_taryfikator" value="15" data-valuetwo="25000" data-valuethree="Posiadanie narkotyków twardych"/>
+		<div class="control_indicator"></div>
+		x
+		<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+	</label>
+				</div>
+				<button type="button" class="collapsible">GŁÓWNE PRZESTĘPSTWA</button>
+				<div class="content">
+<label class="control control-checkbox">
+	Naruszenie nietykalności cielesnej PD   | 5 miesięcy i 10000$
+		<input type="checkbox" id="14_taryfikator" value="5" data-valuetwo="10000" data-valuethree="Naruszenie nietykalności cielesnej PD"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+<label class="control control-checkbox">
+	Napad na bank  | 20 miesięcy i 35000$
+		<input type="checkbox" id="15_taryfikator" value="20" data-valuetwo="35000" data-valuethree="Napad na bank"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+<label class="control control-checkbox">
+	Porwanie   | 5 miesięcy i 15000$
+		<input type="checkbox" id="16_taryfikator" value="5" data-valuetwo="15000" data-valuethree="Porwanie"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+<label class="control control-checkbox">
+	Prowokowanie policji   | 10 miesięcy 10000$
+		<input type="checkbox" id="17_taryfikator" value="10" data-valuetwo="10000" data-valuethree="Prowokowanie policji"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+<label class="control control-checkbox">
+	Ucieczka przed PD   | 15 miesięcy i 10000$
+		<input type="checkbox" id="18_taryfikator" value="15" data-valuetwo="10000" data-valuethree="Ucieczka przed PD"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+<label class="control control-checkbox">
+	Naruszenie nietykalności cielesnej PD   | 5 miesięcy i 10000$
+		<input type="checkbox" id="19_taryfikator" value="5" data-valuetwo="10000" data-valuethree="Naruszenie nietykalności cielesnej PD"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+<label class="control control-checkbox">
+	Posiadanie Sprzętu policyjnego   | 5 miesięcy i 15000$ oraz konfiskacja
+		<input type="checkbox" id="20_taryfikator" value="5" data-valuetwo="15000" data-valuethree="Posiadanie Sprzętu policyjnego"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+<label class="control control-checkbox">
+	Napad na sklep   | 10 miesięcy i 10000$
+		<input type="checkbox" id="21_taryfikator" value="10" data-valuetwo="10000" data-valuethree="Napad na sklep"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+<label class="control control-checkbox">
+	Napaść na funkcjonariusza publicznego   | 10 miesięcy i 20000$
+		<input type="checkbox" id="22_taryfikator" value="10" data-valuetwo="20000" data-valuethree="Napaść na funkcjonariusza publicznego"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+<label class="control control-checkbox">
+	Usiłowanie porwania PD   | 10 miesięcy i 20000$
+		<input type="checkbox" id="23_taryfikator" value="10" data-valuetwo="20000" data-valuethree="Usiłowanie porwania PD"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+<label class="control control-checkbox">
+	Porwanie PD   | 15 miesięcy i 30000$
+		<input type="checkbox" id="24_taryfikator" value="15" data-valuetwo="30000" data-valuethree="Porwanie PD"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+
+
+				</div>
+				<button type="button" class="collapsible">INNE PRZESTĘPSTWA</button>
+				<div class="content">
+<label class="control control-checkbox">
+	Fałszywe zgłoszenie   | 5000$
+		<input type="checkbox" id="25_taryfikator" value="0" data-valuetwo="5000" data-valuethree="Fałszywe zgłoszenie"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+<label class="control control-checkbox">
+	Posiadanie brudnych pieniędzy   | 7 miesięcy i 15000$ oraz konfiskacja
+		<input type="checkbox" id="26_taryfikator" value="7" data-valuetwo="15000" data-valuethree="Posiadanie brudnych pieniędzy"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label><label class="control control-checkbox">
+	Składanie fałszywych zeznań     | 5 miesięcy i 7000$
+		<input type="checkbox" id="27_taryfikator" value="5" data-valuetwo="7000" data-valuethree="Składanie fałszywych zeznań"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label><label class="control control-checkbox">
+	Działanie w zorganizowanej grupie przestępczej    35 miesięcy i 25000$
+		<input type="checkbox" id="28_taryfikator" value="35" data-valuetwo="25000" data-valuethree="Działanie w zorganizowanej grupie przestępczej"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label><label class="control control-checkbox">
+	Kradzież pojazdu   | 5 miesięcy i 1000$
+		<input type="checkbox" id="29_taryfikator" value="5" data-valuetwo="1000" data-valuethree="Kradzież pojazdu"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+</label><label class="control control-checkbox">
+	Wykonywanie pracy adwokata bez licencji   | 40 miesięcy 50000$
+		<input type="checkbox" id="30_taryfikator" value="40" data-valuetwo="50000" data-valuethree="Wykonywanie pracy adwokata bez licencji"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+</label><label class="control control-checkbox">
+	Niewykonywanie poleceń FP     |  5 miesięcy
+		<input type="checkbox" id="31_taryfikator" value="5" data-valuetwo="0" data-valuethree="Niewykonywanie poleceń FP"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+</label>
+</label><label class="control control-checkbox">
+	Obraza funkcjonariuszy   | 5 miesięcy i 3000$
+		<input type="checkbox" id="32_taryfikator" value="5" data-valuetwo="3000" data-valuethree="Obraza funkcjonariuszy"/>
+	<div class="control_indicator"></div>
+	x
+	<input type="number" class="number_input" value="1" min="1" max="11111111" step="1" id="multiplier">
+				
+</label>
+
+				</div>
+<button type="button" class="btn btn-primary topcorner" id="taryfikator_result">RESULT</button>
+			 </div>
+				 <div class="taryfikator_box" id="menu_result_tary">
+				<textarea style="resize: none; color:black;font-size: 24px;width:30%;height: 40%;" id="result_taryfikator"></textarea>
+				<div>
+					<button type="button" class="btn btn-primary" id='show_tary_btn'>Pokaz obywatelu</button>
+					<button type="button" class="btn btn-primary" id='auto_tary_btn'>Ustaw wartosci automatycznie</button>
+				</div>
+				</div>
+				<div class="mandat_box">
+
+					<div  id="menu_mandat">
+						
+						<h3>Mandat</h3>
+						
+						<div class="form-group">
+							<input type="text" class="form-control" id='mandat_reason'  placeholder="Wpisz powód">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="mandat_grzywna" placeholder="Wpisz grzywne za mandat">
+						</div>
+						<h6>Komu chcesz wystawic mandat (ID)</h6>
+						<div class="select">
+							<select id="persons_closest">
+							</select>
+							<div class="select_arrow">
+							</div>
+						</div>
+						<button type="button" class="btn btn-primary" id='mandat_btn'>Wystaw Mandat</button>
+					  
+					</div>
+					<div  id="menu_wiezienie">
+						
+						<h3>Wiezienie</h3>
+						
+						<div class="form-group">
+							<input type="text" class="form-control" id='jail_reason'  placeholder="Wpisz powód">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="jail_grzywna" placeholder="Wpisz grzywne za wyrok">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="jail_lat" placeholder="Wpisz czas kary pozbawienia wolnosci">
+						</div>
+						<h6>Kogo chcesz wysłać do wiezięnia (ID)</h6>
+						<div class="select">
+							<select id="persons_closest_2">
+							</select>
+							<div class="select_arrow">
+							</div>
+						</div>
+						<button type="button" class="btn btn-primary" id='jail_btn'>Wyślij do wiezięnia</button>
+					  
+					</div>
+				</div>
+				<div class="search_box" id="search_menu">
+					<h3>Wyszukaj obywatela</h3>
+					<div class="form-group">
+						<input type="text" class="form-control" id='user_name'  placeholder="Wpisz imie i nazwisko obywatela">
+					</div>
+					<button type="button" class="btn btn-primary" id='search_btn'>Wyszukaj Obywatela</button>
+				</div>
+				<div id="finded_person_menu">
+					<div class="person_tag">
+						
+						<h3 id="Name_u">Vini Hudison</h3>
+						<div class="d-grid gap-5">
+							
+							<label id="weapon_license">LICENCJA NA BRON</label>
+							<label id="dmv" class='ma'>PRAWOJAZDY</label>
+							
+							<h4>INFORMACJE</h4>
+							
+							<label class="user_data_label" id="user_birth">Data urodzenia: 1999-01-01</label>
+							<label class="user_data_label" id="user_height">Wzrost: 174m</label>
+							<label class="user_data_label" id="user_sex">Płeć: M</label>
+						</div>
+					</div>	 
+				</div>
+
+					
+
+
+			</div>	
+		</div>
+	</body>
+    <script type="text/javascript">
+$("#search_btn").click(function()
+{
+	$.post('http://tablet_police/tablet_search', JSON.stringify({name: $("#user_name").val()}));
+});
+
+
+
+$("#search_menu_btn").click(function()
+{
+	$("#search_menu").show();
+	$("#taryfikator_main").hide();
+	$("#menu_wiezienie").hide();
+	$("#menu_result_tary").hide();
+	$("#menu_mandat").hide();
+	$("#finded_person_menu").hide();
+});
+$("#jail_btn").click(function(){
+	$.post('http://tablet_police/tablet_jail', JSON.stringify({id: $("#persons_closest_2 :selected").val(),jailreason: $("#jail_reason").val(), jailamount: $("#jail_grzywna").val(), jaillat: $("#jail_lat").val()}));
+	$("#container").hide();
+	$.post('http://tablet_police/Tablet_focusoff', JSON.stringify({}));
+});
+$("#mandat_btn").click(function(){
+	$.post('http://tablet_police/tablet_mandat', JSON.stringify({id: $("#persons_closest :selected").val(),mandatreason: $("#mandat_reason").val(), mandatamount: $("#mandat_grzywna").val()}));
+	$("#container").hide();
+	$.post('http://tablet_police/Tablet_focusoff', JSON.stringify({}));
+});
+$("#taryfikator_menu_btn").click(function(){
+	$("#taryfikator_main").show();
+	$("#search_menu").hide();
+	$("#menu_wiezienie").hide();
+	$("#menu_result_tary").hide();
+	$("#menu_mandat").hide();
+	$("#finded_person_menu").hide();
+});
+$("#wiezienie_menu_btn").click(function(){
+	$.post('http://tablet_police/get_persons', JSON.stringify({}));
+	$("#taryfikator_main").hide();
+	$("#search_menu").hide();
+	$("#menu_result_tary").hide();
+	$("#menu_mandat").hide();
+	$("#menu_wiezienie").show();
+	$("#finded_person_menu").hide();
+});
+$("#mandat_menu_btn").click(function(){
+	
+$.post('http://tablet_police/get_persons', JSON.stringify({}));
+	$("#taryfikator_main").hide();
+	$("#menu_wiezienie").hide();
+	$("#search_menu").hide();
+	$("#menu_result_tary").hide();
+	$("#menu_mandat").show();
+	$("#finded_person_menu").hide();
+});
+
+        document.onkeyup = function (data) {
+		if (data.which == 27) { // Escape key
+            $("#container").hide();
+			$.post('http://tablet_police/Tablet_focusoff', JSON.stringify({}));
+		}
+	};
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+	
+		
+    </script>
+</html>
